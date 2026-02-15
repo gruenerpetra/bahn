@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<head>
+<title>Bahnprojekt</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="fernverkehr.css">
+<script src="fernverkehr.js"></script>
+</head>
+<body>
+    <h1>Willkommen zum Bahnprojekt</h1>
+    <form id="frm1" action="dataTable.php" method="get">
+        <br>
+        <label for="fMFahrtNr">Fahrtnummer: </label>
+        <input type="text" name="fMFahrtNr" required><br><br>
+        <label for="fDatum">Datum: </label><br>
+        <input type="date" name="fDatum" required><br><br>
+        <label for="fVZN">VZN: </label><br>
+        <input type="text" name="fVZN" required>
+        <br><br>
+        <label for="fZugart">Zugart: </label><br>
+        <input type="text" name="fZugart" required>
+        <br><br>
+        <label for="fTZN">TZN: </label><br>
+        <input type="text" name="fTZN" required>
+        <br><br>
+        <label for="fAbbhf">Abfahrtsbahnhof: </label><br>
+        <input type="text" name="fAbbhf" required>
+        <br><br>
+        <label for="fAnbhf">Ankunftsbahnhof: </label><br>
+        <input type="text" name="fAnbhf" required>
+        <br><br>
+        <label for="fAbZ">Abfahrtszeit: </label>
+        <input type="time" name="fAbZ" required>
+        <br><br>
+        <label for="fAnZ">Ankunftszeit: </label>
+        <input type="time" name="fAnZ" required>
+        <br><br>
+        <label for="fKlasse">Klasse: </label><br>
+        <input type="text" name="fKlasse" required><br><br>
+        <input type="submit" value="Senden"  id="submit"><br><br>
+    </form>
+    <p id="test"></p>
+
+    
+</body>
+</html>

@@ -1,0 +1,1 @@
+webbrowser.open("fahrten_karte.html")

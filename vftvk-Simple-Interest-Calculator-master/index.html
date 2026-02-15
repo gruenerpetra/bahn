@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Einfacher Zinsrechner</title>
+    </head>
+    <body>
+        <div class="maindiv">
+        <h1>Simple Interest Calculator</h1>
+
+        Amount <input type="number"  id="principal">  <br/>
+        Rate <input type="range"  id="rate"  min="1" max="20" value="10.25" step="0.25" onchange="updateRate()">
+        <span id="rate_val">10.25</span>% <br/>
+        No. of Years <input type="number"  id="years">  <br/>
+        Interest : <span id="result"></span><br>
+
+        <button onclick="compute()">Zinsen berechnen</button>
+        <span id="result"></span>
+
+        </div>
+        <footer>
+            &#169; This Calculator belongs to Petra Grüner
+        </footer>
+    </body>
+</html>

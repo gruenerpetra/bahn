@@ -1,0 +1,13 @@
+{
+  "bugtitel": "3. Fahrt",
+  "zugart": "ICE 4",
+  "datum": "09.10.2021",
+  "vz_nummer":"602",
+  "tz_nummer": "9004",
+  "wagennummer": "08 12 004-1",
+  "klasse": "1. Klasse",
+  "abfahrtsort": "Nürnberg Hbf",
+  "abfahrtszeit": "08:10:00",
+  "ankunftsort": "Leipzig Hbf",
+  "ankunftszeit": "10:10:00"
+}

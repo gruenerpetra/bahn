@@ -1,0 +1,56 @@
+<?php return array(
+    'root' => array(
+        'name' => '__root__',
+        'pretty_version' => '1.0.0+no-version-set',
+        'version' => '1.0.0.0',
+        'reference' => null,
+        'type' => 'library',
+        'install_path' => __DIR__ . '/../../',
+        'aliases' => array(),
+        'dev' => true,
+    ),
+    'versions' => array(
+        '__root__' => array(
+            'pretty_version' => '1.0.0+no-version-set',
+            'version' => '1.0.0.0',
+            'reference' => null,
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../../',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'facebook/webdriver' => array(
+            'dev_requirement' => false,
+            'replaced' => array(
+                0 => '*',
+            ),
+        ),
+        'php-webdriver/webdriver' => array(
+            'pretty_version' => '1.13.0',
+            'version' => '1.13.0.0',
+            'reference' => 'aad77b446a302985693fb339d40185be07c8f42d',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../php-webdriver/webdriver',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'symfony/polyfill-mbstring' => array(
+            'pretty_version' => 'v1.33.0',
+            'version' => '1.33.0.0',
+            'reference' => '6d857f4d76bd4b343eac26d6b539585d2bc56493',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../symfony/polyfill-mbstring',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'symfony/process' => array(
+            'pretty_version' => 'v6.4.26',
+            'version' => '6.4.26.0',
+            'reference' => '48bad913268c8cafabbf7034b39c8bb24fbc5ab8',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../symfony/process',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+    ),
+);

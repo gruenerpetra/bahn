@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>OpenStreetMap mit Leaflet</title>
+
+  <!-- Leaflet CSS -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  />
+
+  <style>
+    #map {
+      height: 400px;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+<div id="map"></div>
+
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<script>
+  // Karte initialisieren
+  const map = L.map('map').setView([52.5200, 13.4050], 13); // Berlin
+
+  // OpenStreetMap Tiles laden
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '© OpenStreetMap Mitwirkende'
+  }).addTo(map);
+
+  // Marker setzen
+  L.marker([52.5200, 13.4050])
+    .addTo(map)
+    .bindPopup('Berlin')
+    .openPopup();
+</script>
+
+</body>
+</html>

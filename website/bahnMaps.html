@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>ICE-Fahrt Berlin → München</title>
+
+  <!-- Leaflet CSS -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  />
+
+  <style>
+    #map {
+      height: 600px;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+<h2>ICE-Fahrt Berlin → München</h2>
+<div id="map"></div>
+
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<script>
+  // 1. Karte initialisieren
+  const map = L.map('map').setView([51.1657, 10.4515], 6); // Deutschland zentrieren
+
+  // 2. OpenStreetMap Tiles
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '© OpenStreetMap Mitwirkende'
+  }).addTo(map);
+
+  // 3. Haltepunkte der ICE-Linie Berlin → München
+  const stops = [
+    { name: "Berlin Hbf", coords: [52.525, 13.369] },
+    { name: "Leipzig Hbf", coords: [51.345, 12.383] },
+    { name: "Erfurt Hbf", coords: [50.980, 11.030] },
+    { name: "Nürnberg Hbf", coords: [49.447, 11.082] },
+    { name: "München Hbf", coords: [48.140, 11.558] }
+  ];
+
+  // 4. Strecke als Polyline
+  const routeCoords = stops.map(stop => stop.coords);
+
+  L.polyline(routeCoords, {
+    color: 'blue',
+    weight: 5,
+    opacity: 0.8,
+    dashArray: '10, 5' // gestrichelte Linie für Darstellung
+  }).addTo(map);
+
+  // 5. Marker für jeden Haltepunkt
+  stops.forEach((stop, index) => {
+    L.marker(stop.coords)
+      .addTo(map)
+      .bindPopup(`<b>${stop.name}</b><br>Stopp ${index + 1} von ${stops.length}`)
+      .openPopup();
+  });
+
+  // 6. Karte automatisch auf Route zoomen
+  const bounds = L.latLngBounds(routeCoords);
+  map.fitBounds(bounds);
+</script>
+
+</body>
+</html>
+

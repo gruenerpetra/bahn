@@ -1,0 +1,13 @@
+{
+  "bugtitel": "4. Fahrt",
+  "zugart": "ICE T",
+  "datum": "09.10.2021",
+  "vz_nummer":"1555",
+  "tz_nummer": "1130",
+  "wagennummer": "411 130-8",
+  "klasse": "1. Klasse",
+  "abfahrtsort": "Leipzig Hbf",
+  "abfahrtszeit": "10:34",
+  "ankunftsort": "Dresden Hbf",
+  "ankunftszeit": "11:37"
+}
